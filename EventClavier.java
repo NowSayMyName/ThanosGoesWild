@@ -167,7 +167,7 @@ public class EventClavier extends JFrame implements KeyListener, ActionListener{
 				thanos.fallCounter = 0;
 			}
 			//System.out.println("fall");
-			g.drawImage(impact, xOffset+xImpact-thanos.x+size/4-55, dim.height-yImpact, null);
+			g.drawImage(impact, xOffset+xImpact-thanos.x+size/4-55, dim.height-yImpact-25, null);
 			thanos.fallCounter++;
 			if (thanos.fallCounter == 13) {
 				thanos.fallGif = false;
@@ -178,7 +178,7 @@ public class EventClavier extends JFrame implements KeyListener, ActionListener{
 
 		if (fireball.timeAlive>0) {
 			//System.out.println("shooting");
-			g.drawImage(fireball.image, xOffset+fireball.x-thanos.x, dim.height-fireball.y-thanos.sizeY, null);
+			g.drawImage(fireball.image, xOffset+fireball.x-thanos.x+20, dim.height-fireball.y-thanos.sizeY-80, null);
 			fireball.move();
 		}
 
